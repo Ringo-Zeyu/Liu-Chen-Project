@@ -99,6 +99,6 @@ for (i in 1:11){
 
 # Standardize outcome variable
 ystan <- rep(NA, nrow(x))
-ystan <- y - mean(y)
+ystan <- (y - mean(y)) / sd(y)
 
 normalLasso(x = xstan, y = ystan)
