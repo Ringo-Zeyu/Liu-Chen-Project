@@ -2,7 +2,7 @@ library(janitor)
 library(TSdist)
 library(robustHD)
 # Based on the update LASSO algorithm, draw line plots of each parameters V.S. number of iterations
-updateLasso <- function(x, y, prvs, p = 10, maxiter = 100000, minerror = 10^(-4)){
+updateLasso <- function(x, y, prvs, p = 10, maxiter = 100000, minerror = 10^(-5)){
   prvs <- as.vector(prvs) # Treat the previous parameter set as a vector
   # Number of rows and columns in x
   nobs <- nrow(x)
