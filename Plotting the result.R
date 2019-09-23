@@ -15,7 +15,7 @@ updateLasso <- function(x, y, prvs, p = 10, maxiter = 100000, minerror = 10^(-5)
   w <- rep(0, ncov) ############ Here, we let the start point to be 0 in order to show the search process in plot
   delta <- 100
   # Keep loop if the maxiter hasn't achieved and the result hasn't converged
-  while ((m <= maxiter) & (delta > minerror)) {
+  while ((m <= maxiter) && (delta > minerror)) {
     m <- m + 1
     deri <- as.vector(2*(p^2)*t(x)%*%x%*%w - 2*p*t(x)%*%y)
     # Create a matrix to search for the direction vector
